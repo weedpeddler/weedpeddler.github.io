@@ -1,0 +1,487 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Peddler - Premium Solutions</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Page Loader -->
+    <div class="page-loader" id="pageLoader">
+        <div class="loader-content">
+            <div class="loader-logo">🌿</div>
+            <div class="loader-text">PEDDLER</div>
+            <div class="loader-spinner"></div>
+        </div>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="nav-content">
+                <div class="logo">
+                    <svg class="logo-icon" viewBox="0 0 50 50" fill="currentColor">
+                        <!-- Cannabis Leaf -->
+                        <path d="M25 5 C23 8, 22 12, 22 15 L22 20 C20 18, 18 16, 15 14 C12 12, 10 11, 8 11 C10 13, 12 15, 13 18 C14 20, 14 22, 14 25 L14 25 C12 24, 10 23, 8 22 C6 21, 4 20, 2 20 C4 22, 6 24, 7 26 C8 28, 9 30, 10 32 L10 32 C15 28, 20 26, 25 25 L25 40 L25 25 C30 26, 35 28, 40 32 L40 32 C41 30, 42 28, 43 26 C44 24, 46 22, 48 20 C46 20, 44 21, 42 22 C40 23, 38 24, 36 25 L36 25 C36 22, 36 20, 37 18 C38 15, 40 13, 42 11 C40 11, 38 12, 35 14 C32 16, 30 18, 28 20 L28 15 C28 12, 27 8, 25 5 Z"/>
+                    </svg>
+                    <span class="logo-text">Peddler</span>
+                </div>
+                <div class="nav-links">
+                    <a href="#about" class="nav-link" data-icon="⚡">
+                        <span class="nav-icon">⚡</span>
+                        <span class="nav-text">Features</span>
+                    </a>
+                    <a href="#philosophy" class="nav-link" data-icon="📚">
+                        <span class="nav-icon">📚</span>
+                        <span class="nav-text">Docs</span>
+                    </a>
+                    <a href="#contact" class="nav-link" data-icon="💬">
+                        <span class="nav-icon">💬</span>
+                        <span class="nav-text">Contact</span>
+                    </a>
+                    <div class="blog-dropdown-wrapper">
+                        <button class="btn-primary blog-btn" id="blogDropdownBtn">
+                            <span class="nav-icon">📝</span>
+                            <span>Blog</span>
+                            <svg width="12" height="12" viewBox="0 0 12 12" fill="currentColor" style="margin-left: 0.25rem;">
+                                <path d="M6 8L2 4h8L6 8z"/>
+                            </svg>
+                        </button>
+                        <div class="blog-dropdown-menu" id="blogDropdownMenu">
+                            <a href="https://medium.com/@weedxpeddler/the-reflection-trick-next-gen-ppid-spoofing-using-process-cloning-de9a6b1e29b0" target="_blank" class="blog-item">
+                                <div class="blog-item-icon">📝</div>
+                                <div class="blog-item-content">
+                                    <h4>Stealthy PPID Spoofing</h4>
+                                    <p>Advanced parent process spoofing techniques</p>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <button class="mobile-menu-btn" id="mobileMenuBtn">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-background">
+            <div class="gradient-orb orb-1"></div>
+            <div class="gradient-orb orb-2"></div>
+            <div class="gradient-orb orb-3"></div>
+            <div class="gradient-orb orb-4"></div>
+        </div>
+        <div class="container">
+            <div class="hero-content">
+                <h1 class="hero-title" id="heroTitle">
+                    <span class="title-line">Command</span>
+                    <span class="title-line gradient-text">Control</span>
+                    <span class="title-line">Dominate</span>
+                </h1>
+                <p class="hero-description">
+                    Advanced post-exploitation framework with AI-driven automation for red team operations. 
+                    Let artificial intelligence control your beacons and execute engagement scenarios autonomously.
+                </p>
+                <div class="hero-cta">
+                    <button class="btn-large btn-primary" id="watchDemoBtn">
+                        <span>Watch Demo</span>
+                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                            <path d="M8 5L15 10L8 15V5Z" fill="currentColor"/>
+                        </svg>
+                    </button>
+                    <div class="demo-counter" id="demoCounter">
+                        <div class="counter-icon">👁️</div>
+                        <div class="counter-content">
+                            <span class="counter-value" id="counterValue">0</span>
+                            <span class="counter-label">users want to see demo</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="scroll-indicator">
+            <div class="scroll-line"></div>
+            <span>Explore capabilities</span>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about" id="about">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-label">Features</span>
+                <h2 class="section-title">Built for <span class="gradient-text">Operators</span></h2>
+                <p class="section-description">
+                    Peddler is a next-generation C2 framework engineered for advanced persistent operations.
+                    Built with stealth, reliability, and operator efficiency at its core.
+                </p>
+            </div>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <svg viewBox="0 0 24 24" fill="none">
+                            <path d="M12 2L2 7L12 12L22 7L12 2Z" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>
+                            <path d="M2 17L12 22L22 17" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>
+                            <path d="M2 12L12 17L22 12" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>
+                        </svg>
+                    </div>
+                    <h3 class="feature-title">Beacon Management</h3>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <svg viewBox="0 0 24 24" fill="none">
+                            <circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="2"/>
+                            <path d="M12 6V12L16 14" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                        </svg>
+                    </div>
+                    <h3 class="feature-title">Polymorphic Builds</h3>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <svg viewBox="0 0 24 24" fill="none">
+                            <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z" fill="currentColor"/>
+                        </svg>
+                    </div>
+                    <h3 class="feature-title">Advanced Evasion</h3>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <svg viewBox="0 0 24 24" fill="none">
+                            <path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>
+                        </svg>
+                    </div>
+                    <h3 class="feature-title">AI Automation</h3>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Peddler Section -->
+    <section class="why-peddler">
+        <div class="container">
+            <div class="why-content">
+                <div class="why-text">
+                    <span class="section-label">Why Peddler?</span>
+                    <h2 class="section-title">Modern C2 for <span class="gradient-text">Modern Threats</span></h2>
+                    <p class="why-description">
+                        While other frameworks rely on outdated techniques, Peddler brings cutting-edge 
+                        evasion and operational security to every engagement.
+                    </p>
+                    <div class="comparison-list">
+                        <div class="comparison-item">
+                            <div class="check-icon">✓</div>
+                            <div>
+                                <strong>Polymorphic by Default</strong>
+                            </div>
+                        </div>
+                        <div class="comparison-item">
+                            <div class="check-icon">✓</div>
+                            <div>
+                                <strong>AI-Driven Red Teaming</strong>
+                            </div>
+                        </div>
+                        <div class="comparison-item">
+                            <div class="check-icon">✓</div>
+                            <div>
+                                <strong>EDR/AV Evasion</strong>
+                            </div>
+                        </div>
+                        <div class="comparison-item">
+                            <div class="check-icon">✓</div>
+                            <div>
+                                <strong>Beginner Friendly</strong>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="why-visual">
+                    <div class="terminal-mockup">
+                        <div class="terminal-glow"></div>
+                        <div class="terminal-header">
+                            <div class="terminal-buttons">
+                                <span class="btn-red"></span>
+                                <span class="btn-yellow"></span>
+                                <span class="btn-green"></span>
+                            </div>
+                            <span class="terminal-title">🌿 Peddler C2 Framework v1.0.0</span>
+                            <div class="terminal-status">
+                                <span class="status-dot"></span>
+                                <span>Connected</span>
+                            </div>
+                        </div>
+                        <div class="terminal-body" id="terminalBody">
+                            <div class="terminal-line">
+                                <span class="prompt">peddler@server:~$</span>
+                                <span class="command typed-text" data-text="listeners"></span>
+                            </div>
+                            <div class="terminal-line output">
+                                <span class="success">✓</span> HTTP Listener [0.0.0.0:8080] - Active
+                            </div>
+                            <div class="terminal-line output">
+                                <span class="success">✓</span> HTTPS Listener [0.0.0.0:8443] - Active
+                            </div>
+                            <div class="terminal-line">
+                                <span class="prompt">peddler@server:~$</span>
+                                <span class="command typed-text" data-text="beacons --active"></span>
+                            </div>
+                            <div class="terminal-line output">
+                                <span class="success">✓</span> [ID: 01] DESKTOP-HR01\john.doe [ADMIN] - Windows 11 - Last seen: 2s ago
+                            </div>
+                            <div class="terminal-line output">
+                                <span class="success">✓</span> [ID: 02] WEB-SERVER-03\www-data [USER] - Ubuntu 22.04 - Last seen: 5s ago
+                            </div>
+                            <div class="terminal-line output">
+                                <span class="success">✓</span> [ID: 03] DC-01\administrator [ADMIN] - Windows Server 2022 - Last seen: 1s ago
+                            </div>
+                            <div class="terminal-line">
+                                <span class="prompt">peddler@server:~$</span>
+                                <span class="command typed-text" data-text="interact 03"></span>
+                            </div>
+                            <div class="terminal-line output">
+                                <span class="success">✓</span> Interacting with beacon 03 [DC-01\administrator]
+                            </div>
+                            <div class="terminal-line">
+                                <span class="prompt beacon-prompt">beacon[03]></span>
+                                <span class="command typed-text" data-text="ai-agent --task=enum-domain"></span>
+                            </div>
+                            <div class="terminal-line output ai-output">
+                                <span class="ai-icon">🤖</span> AI Agent initiated: Domain enumeration
+                            </div>
+                            <div class="terminal-line output">
+                                <span class="success">✓</span> Discovering domain controllers...
+                            </div>
+                            <div class="terminal-line output">
+                                <span class="success">✓</span> Enumerating users and groups...
+                            </div>
+                            <div class="terminal-line output">
+                                <span class="success">✓</span> Mapping trust relationships...
+                            </div>
+                            <div class="terminal-line output ai-output">
+                                <span class="ai-icon">🤖</span> Found 3 DCs, 247 users, 18 privileged accounts
+                            </div>
+                            <div class="terminal-line">
+                                <span class="prompt beacon-prompt">beacon[03]></span>
+                                <span class="cursor-blink">_</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Capabilities Section -->
+    <section class="capabilities">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-label">Capabilities</span>
+                <h2 class="section-title">Arsenal of <span class="gradient-text">Tools</span></h2>
+                <p class="section-description">
+                    Everything you need for sophisticated red team operations in one powerful framework.
+                </p>
+            </div>
+            <div class="capabilities-grid">
+                <div class="capability-item">
+                    <div class="capability-icon">⚡</div>
+                    <div class="capability-content">
+                        <h4>Shell Execution</h4>
+                    </div>
+                </div>
+                <div class="capability-item">
+                    <div class="capability-icon">🤖</div>
+                    <div class="capability-content">
+                        <h4>AI Control</h4>
+                    </div>
+                </div>
+                <div class="capability-item">
+                    <div class="capability-icon">📁</div>
+                    <div class="capability-content">
+                        <h4>File Operations</h4>
+                    </div>
+                </div>
+                <div class="capability-item">
+                    <div class="capability-icon">📸</div>
+                    <div class="capability-content">
+                        <h4>Surveillance</h4>
+                    </div>
+                </div>
+                <div class="capability-item">
+                    <div class="capability-icon">🔧</div>
+                    <div class="capability-content">
+                        <h4>BOF Loader</h4>
+                    </div>
+                </div>
+                <div class="capability-item">
+                    <div class="capability-icon">💾</div>
+                    <div class="capability-content">
+                        <h4>In-Memory PE Execution</h4>
+                    </div>
+                </div>
+                <div class="capability-item">
+                    <div class="capability-icon">🗺️</div>
+                    <div class="capability-content">
+                        <h4>Geofencing</h4>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Technical Section -->
+    <section class="philosophy" id="philosophy">
+        <div class="container">
+            <div class="philosophy-content">
+                <div class="philosophy-image">
+                    <div class="image-container">
+                        <div class="image-glow"></div>
+                        <svg class="philosophy-svg" viewBox="0 0 400 500" fill="none">
+                            <!-- Central Cannabis Leaf -->
+                            <g transform="translate(200, 250) scale(3.5)">
+                                <path d="M25 5 C23 8, 22 12, 22 15 L22 20 C20 18, 18 16, 15 14 C12 12, 10 11, 8 11 C10 13, 12 15, 13 18 C14 20, 14 22, 14 25 L14 25 C12 24, 10 23, 8 22 C6 21, 4 20, 2 20 C4 22, 6 24, 7 26 C8 28, 9 30, 10 32 L10 32 C15 28, 20 26, 25 25 L25 40 L25 25 C30 26, 35 28, 40 32 L40 32 C41 30, 42 28, 43 26 C44 24, 46 22, 48 20 C46 20, 44 21, 42 22 C40 23, 38 24, 36 25 L36 25 C36 22, 36 20, 37 18 C38 15, 40 13, 42 11 C40 11, 38 12, 35 14 C32 16, 30 18, 28 20 L28 15 C28 12, 27 8, 25 5 Z" 
+                                      fill="url(#gradient1)" opacity="0.8"/>
+                            </g>
+                            
+                            <!-- Growth Circles -->
+                            <circle cx="200" cy="250" r="150" stroke="url(#gradient1)" stroke-width="2" opacity="0.2"/>
+                            <circle cx="200" cy="250" r="120" stroke="url(#gradient1)" stroke-width="2" opacity="0.3"/>
+                            <circle cx="200" cy="250" r="90" stroke="url(#gradient1)" stroke-width="2" opacity="0.4"/>
+                            
+                            <!-- Orbiting Leaves - Solar System Style -->
+                            <!-- Outer Orbit (r=150) -->
+                            <g class="orbit-leaf orbit-1">
+                                <g transform="translate(350, 250) scale(0.6)" opacity="0.4">
+                                    <path d="M25 5 C23 8, 22 12, 22 15 L22 20 C20 18, 18 16, 15 14 C12 12, 10 11, 8 11 C10 13, 12 15, 13 18 C14 20, 14 22, 14 25 L14 25 C12 24, 10 23, 8 22 C6 21, 4 20, 2 20 C4 22, 6 24, 7 26 C8 28, 9 30, 10 32 L10 32 C15 28, 20 26, 25 25 L25 40 L25 25 C30 26, 35 28, 40 32 L40 32 C41 30, 42 28, 43 26 C44 24, 46 22, 48 20 C46 20, 44 21, 42 22 C40 23, 38 24, 36 25 L36 25 C36 22, 36 20, 37 18 C38 15, 40 13, 42 11 C40 11, 38 12, 35 14 C32 16, 30 18, 28 20 L28 15 C28 12, 27 8, 25 5 Z" 
+                                          fill="url(#gradient1)"/>
+                                </g>
+                            </g>
+                            
+                            <g class="orbit-leaf orbit-2">
+                                <g transform="translate(50, 250) scale(0.6)" opacity="0.4">
+                                    <path d="M25 5 C23 8, 22 12, 22 15 L22 20 C20 18, 18 16, 15 14 C12 12, 10 11, 8 11 C10 13, 12 15, 13 18 C14 20, 14 22, 14 25 L14 25 C12 24, 10 23, 8 22 C6 21, 4 20, 2 20 C4 22, 6 24, 7 26 C8 28, 9 30, 10 32 L10 32 C15 28, 20 26, 25 25 L25 40 L25 25 C30 26, 35 28, 40 32 L40 32 C41 30, 42 28, 43 26 C44 24, 46 22, 48 20 C46 20, 44 21, 42 22 C40 23, 38 24, 36 25 L36 25 C36 22, 36 20, 37 18 C38 15, 40 13, 42 11 C40 11, 38 12, 35 14 C32 16, 30 18, 28 20 L28 15 C28 12, 27 8, 25 5 Z" 
+                                          fill="url(#gradient1)"/>
+                                </g>
+                            </g>
+                            
+                            <!-- Middle Orbit (r=120) -->
+                            <g class="orbit-leaf orbit-3">
+                                <g transform="translate(200, 130) scale(0.7)" opacity="0.45">
+                                    <path d="M25 5 C23 8, 22 12, 22 15 L22 20 C20 18, 18 16, 15 14 C12 12, 10 11, 8 11 C10 13, 12 15, 13 18 C14 20, 14 22, 14 25 L14 25 C12 24, 10 23, 8 22 C6 21, 4 20, 2 20 C4 22, 6 24, 7 26 C8 28, 9 30, 10 32 L10 32 C15 28, 20 26, 25 25 L25 40 L25 25 C30 26, 35 28, 40 32 L40 32 C41 30, 42 28, 43 26 C44 24, 46 22, 48 20 C46 20, 44 21, 42 22 C40 23, 38 24, 36 25 L36 25 C36 22, 36 20, 37 18 C38 15, 40 13, 42 11 C40 11, 38 12, 35 14 C32 16, 30 18, 28 20 L28 15 C28 12, 27 8, 25 5 Z" 
+                                          fill="url(#gradient1)"/>
+                                </g>
+                            </g>
+                            
+                            <g class="orbit-leaf orbit-4">
+                                <g transform="translate(200, 370) scale(0.7)" opacity="0.45">
+                                    <path d="M25 5 C23 8, 22 12, 22 15 L22 20 C20 18, 18 16, 15 14 C12 12, 10 11, 8 11 C10 13, 12 15, 13 18 C14 20, 14 22, 14 25 L14 25 C12 24, 10 23, 8 22 C6 21, 4 20, 2 20 C4 22, 6 24, 7 26 C8 28, 9 30, 10 32 L10 32 C15 28, 20 26, 25 25 L25 40 L25 25 C30 26, 35 28, 40 32 L40 32 C41 30, 42 28, 43 26 C44 24, 46 22, 48 20 C46 20, 44 21, 42 22 C40 23, 38 24, 36 25 L36 25 C36 22, 36 20, 37 18 C38 15, 40 13, 42 11 C40 11, 38 12, 35 14 C32 16, 30 18, 28 20 L28 15 C28 12, 27 8, 25 5 Z" 
+                                          fill="url(#gradient1)"/>
+                                </g>
+                            </g>
+                            
+                            <!-- Inner Orbit (r=90) -->
+                            <g class="orbit-leaf orbit-5">
+                                <g transform="translate(290, 250) scale(0.55)" opacity="0.5">
+                                    <path d="M25 5 C23 8, 22 12, 22 15 L22 20 C20 18, 18 16, 15 14 C12 12, 10 11, 8 11 C10 13, 12 15, 13 18 C14 20, 14 22, 14 25 L14 25 C12 24, 10 23, 8 22 C6 21, 4 20, 2 20 C4 22, 6 24, 7 26 C8 28, 9 30, 10 32 L10 32 C15 28, 20 26, 25 25 L25 40 L25 25 C30 26, 35 28, 40 32 L40 32 C41 30, 42 28, 43 26 C44 24, 46 22, 48 20 C46 20, 44 21, 42 22 C40 23, 38 24, 36 25 L36 25 C36 22, 36 20, 37 18 C38 15, 40 13, 42 11 C40 11, 38 12, 35 14 C32 16, 30 18, 28 20 L28 15 C28 12, 27 8, 25 5 Z" 
+                                          fill="url(#gradient1)"/>
+                                </g>
+                            </g>
+                            
+                            <g class="orbit-leaf orbit-6">
+                                <g transform="translate(110, 250) scale(0.55)" opacity="0.5">
+                                    <path d="M25 5 C23 8, 22 12, 22 15 L22 20 C20 18, 18 16, 15 14 C12 12, 10 11, 8 11 C10 13, 12 15, 13 18 C14 20, 14 22, 14 25 L14 25 C12 24, 10 23, 8 22 C6 21, 4 20, 2 20 C4 22, 6 24, 7 26 C8 28, 9 30, 10 32 L10 32 C15 28, 20 26, 25 25 L25 40 L25 25 C30 26, 35 28, 40 32 L40 32 C41 30, 42 28, 43 26 C44 24, 46 22, 48 20 C46 20, 44 21, 42 22 C40 23, 38 24, 36 25 L36 25 C36 22, 36 20, 37 18 C38 15, 40 13, 42 11 C40 11, 38 12, 35 14 C32 16, 30 18, 28 20 L28 15 C28 12, 27 8, 25 5 Z" 
+                                          fill="url(#gradient1)"/>
+                                </g>
+                            </g>
+                            
+                            <defs>
+                                <linearGradient id="gradient1" x1="0%" y1="0%" x2="100%" y2="100%">
+                                    <stop offset="0%" style="stop-color:#6b9a5b;stop-opacity:1" />
+                                    <stop offset="100%" style="stop-color:#4a7c3b;stop-opacity:1" />
+                                </linearGradient>
+                            </defs>
+                        </svg>
+                    </div>
+                </div>
+                <div class="philosophy-text">
+                    <span class="section-label">Architecture</span>
+                    <h2 class="section-title">Built for <span class="gradient-text">Stealth</span></h2>
+                    <p class="philosophy-description">
+                        Peddler's architecture combines AI-driven automation with advanced evasion techniques. 
+                        Intelligent agents can autonomously control beacons, execute complex scenarios, 
+                        and adapt to defensive measures in real-time during red team operations.
+                    </p>
+                    <div class="launch-banner">
+                        <div class="launch-icon">🚀</div>
+                        <div class="launch-content">
+                            <h3 class="launch-title">Launching Soon</h3>
+                            <p class="launch-subtitle">Production ready. Final validation in progress.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact" id="contact">
+        <div class="container">
+            <div class="contact-simple">
+                <span class="section-label">Contact</span>
+                <h2 class="section-title">Get Your <span class="gradient-text">License</span></h2>
+                <p class="contact-description">
+                    For licensing inquiries, pricing, and custom deployments
+                </p>
+                <div class="email-contact" id="emailReveal">
+                    <div class="email-icon">
+                        <svg viewBox="0 0 24 24" fill="none">
+                            <path d="M3 8L10.89 13.26C11.54 13.67 12.46 13.67 13.11 13.26L21 8M5 19H19C20.1 19 21 18.1 21 17V7C21 5.9 20.1 5 19 5H5C3.9 5 3 5.9 3 7V17C3 18.1 3.9 19 5 19Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </div>
+                    <div class="email-text">
+                        <div class="email-label">Email us for purchase</div>
+                        <div class="email-value blurred" data-email="weedxpeddler@gmail.com">
+                            <span class="blur-text">weedxpeddler@gmail.com</span>
+                            <span class="real-email">weedxpeddler@gmail.com</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <div class="logo">
+                        <svg class="logo-icon" viewBox="0 0 50 50" fill="currentColor">
+                            <!-- Cannabis Leaf -->
+                            <path d="M25 5 C23 8, 22 12, 22 15 L22 20 C20 18, 18 16, 15 14 C12 12, 10 11, 8 11 C10 13, 12 15, 13 18 C14 20, 14 22, 14 25 L14 25 C12 24, 10 23, 8 22 C6 21, 4 20, 2 20 C4 22, 6 24, 7 26 C8 28, 9 30, 10 32 L10 32 C15 28, 20 26, 25 25 L25 40 L25 25 C30 26, 35 28, 40 32 L40 32 C41 30, 42 28, 43 26 C44 24, 46 22, 48 20 C46 20, 44 21, 42 22 C40 23, 38 24, 36 25 L36 25 C36 22, 36 20, 37 18 C38 15, 40 13, 42 11 C40 11, 38 12, 35 14 C32 16, 30 18, 28 20 L28 15 C28 12, 27 8, 25 5 Z"/>
+                        </svg>
+                        <span class="logo-text">Peddler</span>
+                    </div>
+                    <p class="footer-tagline">Advanced C2 Framework for Red Team Operations</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Peddler. All rights reserved.</p>
+                <div class="footer-social">
+                    <a href="https://github.com/weedpeddler/" target="_blank" class="social-link" aria-label="GitHub">
+                        <svg viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
