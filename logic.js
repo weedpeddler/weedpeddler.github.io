@@ -1,8 +1,8 @@
 var NOTES_KEY = 'peddler_data';
 var CONFIG_KEY = 'peddler_config';
 var VERIFY = 'PEDDLER_VERIFIED';
-var GIST_FILE = 'peddler-notes.json';
-var GIST_ID = ''; // <-- Paste your Gist ID inside the quotes
+var GIST_FILE = 'weedpeddler.json';
+var GIST_ID = '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'; // <-- Paste your Gist ID inside the quotes
 var state = { passcode: '', editingId: null, allNotes: [], filteredNotes: [], gistId: '', tokenEnc: '' };
 
 function getKey(pass, salt) {
