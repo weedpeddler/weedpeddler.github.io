@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Peddler Notes</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="color-idle">
+  <div class="container">
+    <div class="unlock-overlay" id="unlockOverlay">
+      <div class="unlock-box">
+        <h1 class="unlock-logo">PEDDLER NOTES</h1>
+        <p class="unlock-sub" id="unlockSub">Set your passcode</p>
+        <input type="password" class="unlock-input" id="unlockInput" placeholder="Passcode" autofocus>
+        <div class="unlock-actions">
+          <button class="btn btn-primary" id="unlockBtn">Start</button>
+        </div>
+        <p class="unlock-error" id="unlockError"></p>
+      </div>
+    </div>
+
+    <div class="main" id="mainApp" style="display:none">
+      <div class="header">
+        <div class="header-left">
+          <button class="lock-btn" id="lockBtn" title="Lock">&#x1F512;</button>
+          <h1>PEDDLER NOTES</h1>
+        </div>
+        <div class="header-right">
+          <button class="btn btn-add" id="showAddBtn">+ Add Note</button>
+          <button class="btn btn-icon" id="settingsBtn" title="GitHub Sync">&#x2699;</button>
+        </div>
+      </div>
+
+      <div class="search-area">
+        <input type="text" class="search-input" id="searchInput" placeholder="SEARCH NOTES..." autofocus>
+      </div>
+
+      <div class="add-note-panel" id="addNotePanel" style="display:none">
+        <div class="panel-inner">
+          <input type="text" class="field" id="noteTitle" placeholder="Title">
+          <textarea class="field field-area" id="noteContent" placeholder="Commands, links, notes..."></textarea>
+          <input type="text" class="field" id="noteTags" placeholder="Tags (space separated)">
+          <div class="panel-actions">
+            <button class="btn btn-save" id="saveNoteBtn">Save Note</button>
+            <button class="btn btn-cancel" id="cancelNoteBtn">Cancel</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="notes-container">
+        <div class="no-notes" id="noNotes" style="display:none">
+          <h2 id="noNotesTitle">No Notes Yet</h2>
+          <p id="noNotesSub">Click "+ Add Note" to create your first note.</p>
+        </div>
+        <div class="notes-grid" id="notesGrid"></div>
+      </div>
+    </div>
+
+    <div class="footer" id="footer" style="display:none">
+      <p>Peddler Notes &mdash; AES-256 Encrypted &bull; <span id="syncStatus">Local Only</span></p>
+    </div>
+  </div>
+
+  <div class="modal-overlay" id="settingsModal" style="display:none">
+    <div class="modal">
+      <h2>GitHub Sync Setup</h2>
+      <p class="modal-desc">Create a <a href="https://github.com/settings/tokens?type=beta" target="_blank">GitHub Personal Access Token</a> with <code>gist</code> scope (classic token) and paste it below.</p>
+      <input type="password" class="field" id="githubTokenInput" placeholder="github_pat_...">
+      <div class="panel-actions">
+        <button class="btn btn-save" id="saveTokenBtn">Save &amp; Sync</button>
+        <button class="btn btn-cancel" id="clearTokenBtn">Disconnect</button>
+        <button class="btn btn-cancel" id="closeSettingsBtn">Close</button>
+      </div>
+      <p class="modal-hint" id="tokenStatus"></p>
+    </div>
+  </div>
+
+  <script src="logic.js"></script>
+</body>
+</html>
