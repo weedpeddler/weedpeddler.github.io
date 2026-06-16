@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Peddler</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="color-idle">
+  <div class="container">
+    <div class="unlock-overlay" id="unlockOverlay">
+      <div class="unlock-box">
+        <input type="password" class="unlock-input" id="unlockInput" placeholder="passcode" autofocus>
+        <div class="unlock-actions">
+          <button class="btn-unlock" id="unlockBtn">&#x2398;</button>
+        </div>
+        <p class="unlock-error" id="unlockError"></p>
+      </div>
+    </div>
+
+    <div class="main" id="mainApp" style="display:none">
+      <div class="top-bar">
+        <div class="search-wrap">
+          <input type="text" class="search-input" id="searchInput" placeholder="search" autofocus>
+        </div>
+        <div class="top-actions">
+          <button class="btn-top" id="showAddBtn" title="Add">+</button>
+          <button class="btn-top" id="lockBtn" title="Lock">&#x1F512;</button>
+          <button class="btn-top" id="settingsBtn" title="Settings">&#x2699;</button>
+        </div>
+      </div>
+
+      <div class="add-panel" id="addPanel" style="display:none">
+        <textarea class="add-field" id="noteContent" placeholder="paste command, link, or note..."></textarea>
+        <div class="add-row">
+          <input type="text" class="add-tags" id="noteTags" placeholder="tags">
+          <div class="panel-actions">
+            <button class="btn-act btn-save" id="saveBtn">Save</button>
+            <button class="btn-act btn-cancel" id="cancelBtn">Cancel</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="results-area" id="resultsArea">
+        <div class="results-list" id="resultsList"></div>
+        <div class="empty-state" id="emptyState">
+          <span class="empty-icon">&#x2728;</span>
+          <p>type to search your notes</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer" id="footer" style="display:none">
+      <span id="syncStatus"></span>
+    </div>
+  </div>
+
+  <div class="modal-overlay" id="settingsModal" style="display:none">
+    <div class="modal">
+      <h2>settings</h2>
+      <div class="settings-section">
+        <h3>github sync</h3>
+        <p class="modal-desc">token with <code>gist</code> scope</p>
+        <input type="password" class="field" id="tokenInput" placeholder="github_pat_...">
+        <div class="panel-actions">
+          <button class="btn-act btn-save" id="saveTokenBtn">Save</button>
+          <button class="btn-act btn-cancel" id="clearTokenBtn">Disconnect</button>
+        </div>
+        <p class="modal-hint" id="tokenStatus"></p>
+        <div id="shareArea" style="display:none;margin-top:12px">
+          <p class="modal-desc">share link (no token needed):</p>
+          <div class="share-box">
+            <input type="text" class="field share-field" id="shareInput" readonly>
+            <button class="btn-act btn-copy" id="copyShareBtn">Copy</button>
+          </div>
+        </div>
+      </div>
+      <hr class="settings-divider">
+      <div class="settings-section">
+        <h3>clear data</h3>
+        <p class="modal-desc">gist backup stays safe</p>
+        <button class="btn-clear" id="clearBtn">Clear &amp; Logout</button>
+      </div>
+      <button class="btn-act btn-cancel close-btn" id="closeSettingsBtn">Close</button>
+    </div>
+  </div>
+
+  <script src="logic.js"></script>
+</body>
+</html>
