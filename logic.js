@@ -2,7 +2,7 @@ var NOTES_KEY = 'peddler_data';
 var CONFIG_KEY = 'peddler_config';
 var VERIFY = 'PEDDLER_VERIFIED';
 var GIST_FILE = 'weedpeddler.json';
-var GIST_ID = ''; // <-- Paste your Gist ID inside the quotes
+var GIST_ID = 'https://akami.live#9f4205315d30372bbe606c0363de024a'; // <-- Paste your Gist ID inside the quotes
 var state = { passcode: '', editingId: null, allNotes: [], filteredNotes: [], gistId: '', tokenEnc: '' };
 
 function getKey(pass, salt) {
