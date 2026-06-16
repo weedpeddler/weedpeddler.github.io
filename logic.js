@@ -228,11 +228,11 @@ function logoutClear() {
   if (!confirm('Clear all local data? Gist backup stays safe.')) return;
   localStorage.removeItem(NOTES_KEY);
   localStorage.removeItem(CONFIG_KEY);
+  if (GIST_ID) saveConfig(GIST_ID, '');
   state.passcode = ''; state.editingId = null; state.allNotes = []; state.filteredNotes = [];
-  state.gistId = ''; state.tokenEnc = '';
+  state.gistId = GIST_ID || ''; state.tokenEnc = '';
   closeSettings();
   lock();
-
   syncMsg('Local');
 }
 
